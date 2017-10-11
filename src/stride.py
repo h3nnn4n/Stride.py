@@ -56,6 +56,7 @@ class Stride():
         subprocess.call([self.binpath, self.input_file, "-f" + self.output_file])
 
         with open(self.output_file, "r") as f:
+            self.ss = []
             while True:
                 line = f.readline()
 
